@@ -7,6 +7,7 @@ const profileSchema = new Schema({
     password:{
         type:Number
     }
+    
 },{timestamps:true})
 
 const Profile = model("Profile", profileSchema);

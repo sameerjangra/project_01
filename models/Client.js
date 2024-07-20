@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const {Schema ,model} = require("mongoose")
 
 const ClientSchema = new Schema({

@@ -8,7 +8,7 @@ const blogSchema = new Schema({
     img:{
         type:String
     },
-    userId: mongoose.Schema.Types.ObjectId
+    userId: {type: mongoose.Schema.Types.ObjectId}
 
 }, {timestamps:true})
 

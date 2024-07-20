@@ -1,6 +1,3 @@
-const express = require('express');
-
-
 const Blog = require('../models/Blog'); // Adjust the path as necessary
 
 exports.createBlog = async (req, res) => {
@@ -48,6 +45,20 @@ exports.search = async (req, res) => {
     res.json(blogs);
   } catch (err) {
     res.status(500).json({ message: err.message });
+  }
+}
+
+exports.findBlogsWithUsers = async (req, res)=>{
+  try {
+    const result = await Blog.aggregate([
+      {
+        $lookup:{
+
+        }
+      }
+    ])
+  } catch (error) {
+    console.log(error)
   }
 }
 
