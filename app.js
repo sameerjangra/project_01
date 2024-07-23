@@ -23,7 +23,7 @@ app.use('/api/upload',uploadRoutes);
 
 
 
-mongoose.connect("mongodb+srv://marin:marin@atlascluster.wnza3rf.mongodb.net/project002?retryWrites=true&w=majority&appName=AtlasCluster")
+mongoose.connect(process.env.MONGODB_CONNECT)
 .then((db)=>{
     console.log("database is connected")
 })
